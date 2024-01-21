@@ -1,0 +1,601 @@
+{
+  "config": "CODET5_REFINE_CODEFORM_NOCOMMENT",
+  "data": {
+    "HAS_CLOSE_ELEMENTS": {
+      "loc": "9-10",
+      "input": "public static boolean has_close_elements(List<Double> numbers, double threshold){\n    for (int i = 0; i < numbers.size(); i += 1){\n        for (int j = i + 1; j < numbers.size(); j += 1){\n            double distance = numbers.get(i) - numbers.get(j); \n            if (distance < threshold)\n                return true;\n        }\n    }\n    return false;\n}",
+      "target": "public static boolean has_close_elements(List<Double> numbers, double threshold){\n    for (int i = 0; i < numbers.size(); i += 1){\n        for (int j = i + 1; j < numbers.size(); j += 1){\n            double distance = Math.abs(numbers.get(i) - numbers.get(j)); \n            if (distance < threshold)\n                return true;\n        }\n    }\n    return false;\n}",
+      "function range": "6,5-15,5",
+      "mid_translation": [
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n * \n * @param numbers the list of numbers to check\n * @param threshold the maximum allowed distance between two elements\n * @return true if there are elements closer to each other than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list of numbers that are closer to each other than the specified threshold.\n * \n * @param numbers   the list of numbers to check\n * @param threshold the threshold value to compare the distances between numbers\n * @return true if there are any elements closer to each other than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n * \n * @param numbers the list of numbers to check\n * @param threshold the maximum allowed distance between two elements\n * @return true if there are any elements closer than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are within the given threshold of each other.\n *\n * @param numbers   the list of numbers to check\n * @param threshold the threshold value\n * @return true if there are any elements within the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n *\n * @param numbers   the list of numbers to check\n * @param threshold the threshold value to compare the distances\n * @return true if there are elements closer to each other than the threshold, false otherwise\n */"
+      ],
+      "raw_mid_translation": [
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n * \n * @param numbers the list of numbers to check\n * @param threshold the maximum allowed distance between two elements\n * @return true if there are elements closer to each other than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list of numbers that are closer to each other than the specified threshold.\n * \n * @param numbers   the list of numbers to check\n * @param threshold the threshold value to compare the distances between numbers\n * @return true if there are any elements closer to each other than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n * \n * @param numbers the list of numbers to check\n * @param threshold the maximum allowed distance between two elements\n * @return true if there are any elements closer than the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are within the given threshold of each other.\n *\n * @param numbers   the list of numbers to check\n * @param threshold the threshold value\n * @return true if there are any elements within the threshold, false otherwise\n */",
+        "/**\n * Checks if there are any elements in the given list that are closer to each other than the specified threshold.\n *\n * @param numbers   the list of numbers to check\n * @param threshold the threshold value to compare the distances\n * @return true if there are elements closer to each other than the threshold, false otherwise\n */"
+      ],
+      "raw_output": [
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```java\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```java\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        double currentNumber = numbers.get(i);\n        double nextNumber = numbers.get(i + 1);\n        if (Math.abs(currentNumber - nextNumber) < threshold) {\n            return true;\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```java\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for(int i = 0; i < numbers.size() - 1; i++){\n        for(int j = i + 1; j < numbers.size(); j++){\n            if(Math.abs(numbers.get(i) - numbers.get(j)) < threshold){\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```java\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```java\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```",
+        "```\n    for (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}\n```"
+      ],
+      "output": [
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        double currentNumber = numbers.get(i);\n        double nextNumber = numbers.get(i + 1);\n        if (Math.abs(currentNumber - nextNumber) < threshold) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor(int i = 0; i < numbers.size() - 1; i++){\n        for(int j = i + 1; j < numbers.size(); j++){\n            if(Math.abs(numbers.get(i) - numbers.get(j)) < threshold){\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size(); i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) <= threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean has_close_elements(List<Double> numbers, double threshold){\nfor (int i = 0; i < numbers.size() - 1; i++) {\n        for (int j = i + 1; j < numbers.size(); j++) {\n            if (Math.abs(numbers.get(i) - numbers.get(j)) < threshold) {\n                return true;\n            }\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        }
+      ]
+    },
+    "SEPARATE_PAREN_GROUPS": {
+      "loc": "16-17",
+      "input": "public static List<String> separate_paren_groups(String paren_string) {\n    List<String> result = new ArrayList<String>();\n    String current_string = \"\";\n    int current_depth = 0;\n    for (char c : paren_string.toCharArray()) {\n        if (c == '('){\n            current_depth += 1;\n            current_string += String.valueOf(c);\n        } else { \n            current_depth -= 1;\n            current_string += String.valueOf(c);\n            if (current_depth == 0){\n                result.add(current_string);\n                current_string = \"\";\n            }\n        }\n    }\n    return result;\n}",
+      "target": "public static List<String> separate_paren_groups(String paren_string) {\n    List<String> result = new ArrayList<String>();\n    String current_string = \"\";\n    int current_depth = 0;\n    for (char c : paren_string.toCharArray()) {\n        if (c == '('){\n            current_depth += 1;\n            current_string += String.valueOf(c);\n        } else if (c == ')'){ \n            current_depth -= 1;\n            current_string += String.valueOf(c);\n            if (current_depth == 0){\n                result.add(current_string);\n                current_string = \"\";\n            }\n        }\n    }\n    return result;\n}",
+      "function range": "7,5-27,5",
+      "mid_translation": [
+        "/**\n * Separates the groups of parentheses in the given string.\n * \n * @param paren_string the string containing parentheses groups\n * @return a list of strings representing each separate group of parentheses\n */",
+        "/**\n * Separates a given string into groups delimited by parentheses.\n * \n * @param paren_string the string to separate\n * @return a list of strings representing the groups delimited by parentheses\n */",
+        "/**\n * Separates the groups of parentheses in the given paren_string.\n * \n * @param paren_string the string containing parentheses groups\n * @return a list of strings, each representing a separate group of parentheses\n */",
+        "/**\n * Separates a string into groups delimited by parentheses.\n * \n * @param paren_string the string containing parentheses\n * @return a list of strings representing the groups delimited by parentheses\n */",
+        "/**\n * Separates groups of parentheses in a given string.\n * \n * @param paren_string the string containing parentheses\n * @return a list of strings representing separate groups of parentheses\n */"
+      ],
+      "raw_mid_translation": [
+        "/**\n * Separates the groups of parentheses in the given string.\n * \n * @param paren_string the string containing parentheses groups\n * @return a list of strings representing each separate group of parentheses\n */\n",
+        "/**\n * Separates a given string into groups delimited by parentheses.\n * \n * @param paren_string the string to separate\n * @return a list of strings representing the groups delimited by parentheses\n */\n",
+        "/**\n * Separates the groups of parentheses in the given paren_string.\n * \n * @param paren_string the string containing parentheses groups\n * @return a list of strings, each representing a separate group of parentheses\n */",
+        "/**\n * Separates a string into groups delimited by parentheses.\n * \n * @param paren_string the string containing parentheses\n * @return a list of strings representing the groups delimited by parentheses\n */\n",
+        "/**\n * Separates groups of parentheses in a given string.\n * \n * @param paren_string the string containing parentheses\n * @return a list of strings representing separate groups of parentheses\n */\n"
+      ],
+      "raw_output": [
+        "```\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n}\nreturn groups;\n```",
+        "```java\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic static List<String> separate_paren_groups(String paren_string) {\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb = new StringBuilder();\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```java\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic static List<String> separate_paren_groups(String paren_string) {\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb = new StringBuilder();\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\n\nfor (int i = 0; i < paren_string.length(); i++) {\n    char c = paren_string.charAt(i);\n\n    if (c == '(') {\n        count++;\n    } else if (c == ')') {\n        count--;\n    }\n\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\n\nreturn groups;\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}\n```",
+        "```java\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```java\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;\n```",
+        "```java\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;\n```",
+        "```java\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    \n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        \n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else {\n            if (count > 0) {\n                sb.append(c);\n            }\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```java\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else if (count > 0) {\n            sb.append(c);\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else {\n            if (count > 0) {\n                sb.append(c);\n            }\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (int i = 0; i < paren_string.length(); i++) {\n        char c = paren_string.charAt(i);\n        \n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}\n```",
+        "```\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else if (count > 0) {\n            sb.append(c);\n        }\n    }\n    \n    return groups;\n}\n```"
+      ],
+      "output": [
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n}\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb = new StringBuilder();\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\n    List<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb = new StringBuilder();\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\n\nfor (int i = 0; i < paren_string.length(); i++) {\n    char c = paren_string.charAt(i);\n\n    if (c == '(') {\n        count++;\n    } else if (c == ')') {\n        count--;\n    }\n\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\n\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\nint count = 0;\nint start = 0;\nfor (int i = 0; i < paren_string.length(); i++) {\n    if (paren_string.charAt(i) == '(') {\n        count++;\n    } else if (paren_string.charAt(i) == ')') {\n        count--;\n    }\n    if (count == 0) {\n        groups.add(paren_string.substring(start, i + 1));\n        start = i + 1;\n    }\n}\nreturn groups;",
+          "correctness": "uncompilable"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    \n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        \n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n            if (count == 0) {\n                groups.add(paren_string.substring(start, i + 1));\n                start = i + 1;\n            }\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    int start = 0;\n    for (int i = 0; i < paren_string.length(); i++) {\n        if (paren_string.charAt(i) == '(') {\n            count++;\n        } else if (paren_string.charAt(i) == ')') {\n            count--;\n        }\n        if (count == 0) {\n            groups.add(paren_string.substring(start, i + 1));\n            start = i + 1;\n        }\n    }\n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else {\n            if (count > 0) {\n                sb.append(c);\n            }\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else if (count > 0) {\n            sb.append(c);\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else {\n            if (count > 0) {\n                sb.append(c);\n            }\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (int i = 0; i < paren_string.length(); i++) {\n        char c = paren_string.charAt(i);\n        \n        if (c == '(') {\n            count++;\n        } else if (c == ')') {\n            count--;\n        }\n        \n        sb.append(c);\n        \n        if (count == 0) {\n            groups.add(sb.toString());\n            sb.setLength(0);\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static List<String> separate_paren_groups(String paren_string) {\nList<String> groups = new ArrayList<>();\n    int count = 0;\n    StringBuilder sb = new StringBuilder();\n    \n    for (char c : paren_string.toCharArray()) {\n        if (c == '(') {\n            if (count > 0) {\n                sb.append(c);\n            }\n            count++;\n        } else if (c == ')') {\n            count--;\n            if (count > 0) {\n                sb.append(c);\n            } else if (count == 0 && sb.length() > 0) {\n                groups.add(sb.toString());\n                sb.setLength(0);\n            }\n        } else if (count > 0) {\n            sb.append(c);\n        }\n    }\n    \n    return groups;\n}",
+          "correctness": "wrong"
+        }
+      ]
+    },
+    "TRUNCATE_NUMBER": {
+      "loc": "5-6",
+      "input": "public static double truncate_number(double number) {\n    return number / 1.0; \n}",
+      "target": "public static double truncate_number(double number) {\n    return number % 1.0; \n}",
+      "function range": "4,5-6,5",
+      "mid_translation": [
+        "/**\n * Truncates a decimal number to remove any fractional part.\n *\n * @param number the decimal number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a decimal number to remove any fractional part.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */"
+      ],
+      "raw_mid_translation": [
+        "/**\n * Truncates a decimal number to remove any fractional part.\n *\n * @param number the decimal number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a decimal number to remove any fractional part.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */",
+        "/**\n * Truncates a given number to remove any decimal places.\n *\n * @param number the number to be truncated\n * @return the truncated number\n */"
+      ],
+      "raw_output": [
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```java\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return Math.floor(number);\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```",
+        "```\n    return (int) number;\n}\n```",
+        "```java\npublic static double truncate_number(double number) {\n    return (int) number;\n}\n```"
+      ],
+      "output": [
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn Math.floor(number);\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\nreturn (int) number;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static double truncate_number(double number) {\n    return (int) number;\n}",
+          "correctness": "wrong"
+        }
+      ]
+    },
+    "BELOW_ZERO": {
+      "loc": "10-15",
+      "input": "public static boolean below_zero(List<Integer> operations) {\n    int balance = 0;\n    for (Integer op : operations){\n        balance += op;\n        if (balance > 0){ \n            return false; \n        } \n    } \n    return true; \n}",
+      "target": "public static boolean below_zero(List<Integer> operations) {\n    int balance = 0;\n    for (Integer op : operations){\n        balance += op;\n        if (balance < 0){ \n            return true; \n        } \n    } \n    return false; \n}",
+      "function range": "6,5-15,5",
+      "mid_translation": [
+        "/**\n * Determines if the sum of a list of integers goes below zero.\n * \n * @param operations the list of integers representing the operations\n * @return true if the sum goes below zero, false otherwise\n */",
+        "/**\n * Checks if the sum of all elements in the given list of integers is below zero.\n *\n * @param operations the list of integers representing the operations\n * @return true if the sum is below zero, false otherwise\n */",
+        "/**\n * Determines if the sum of the operations in the given list results in a negative balance.\n * \n * @param operations the list of operations to be performed\n * @return true if the sum of the operations results in a negative balance, false otherwise\n */",
+        "/**\n * Checks if the sum of the operations in the given list is below zero.\n * \n * @param operations the list of operations to be checked\n * @return {@code true} if the sum is below zero, {@code false} otherwise\n */",
+        "/**\n * Checks if the sum of the operations in the given list is always below zero.\n * \n * @param operations the list of operations to be checked\n * @return true if the sum of operations is always below zero, false otherwise\n */"
+      ],
+      "raw_mid_translation": [
+        "/**\n * Determines if the sum of a list of integers goes below zero.\n * \n * @param operations the list of integers representing the operations\n * @return true if the sum goes below zero, false otherwise\n */",
+        "/**\n * Checks if the sum of all elements in the given list of integers is below zero.\n *\n * @param operations the list of integers representing the operations\n * @return true if the sum is below zero, false otherwise\n */",
+        "/**\n * Determines if the sum of the operations in the given list results in a negative balance.\n * \n * @param operations the list of operations to be performed\n * @return true if the sum of the operations results in a negative balance, false otherwise\n */",
+        "/**\n * Checks if the sum of the operations in the given list is below zero.\n * \n * @param operations the list of operations to be checked\n * @return {@code true} if the sum is below zero, {@code false} otherwise\n */",
+        "/**\n * Checks if the sum of the operations in the given list is always below zero.\n * \n * @param operations the list of operations to be checked\n * @return true if the sum of operations is always below zero, false otherwise\n */"
+      ],
+      "raw_output": [
+        "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+        "```java\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}\n```",
+        "```\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}\n```",
+        "```java\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}\n```",
+        "```\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}\n```",
+        "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}",
+        "```\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```java\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```java\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```java\npublic static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}\n```",
+        "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}\n```",
+        "```\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}\n```"
+      ],
+      "output": [
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int num : operations) {\n        sum += num;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum < 0) {\n            return true;\n        }\n    }\n    return false;\n}",
+          "correctness": "plausible"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int num : operations) {\n        sum += num;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n    }\n    return sum < 0;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\n    int sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+          "correctness": "wrong"
+        },
+        {
+          "patch": "public static boolean below_zero(List<Integer> operations) {\nint sum = 0;\n    for (int operation : operations) {\n        sum += operation;\n        if (sum >= 0) {\n            return false;\n        }\n    }\n    return true;\n}",
+          "correctness": "wrong"
+        }
+      ]
+    }
+  }
+}
