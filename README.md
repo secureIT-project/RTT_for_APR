@@ -5,15 +5,16 @@
   <img align="right" src="https://zenodo.org/badge/DOI/10.5281/zenodo.10500593.svg" alt="DOI: 10.5281/zenodo.10500593">
  </a>
  
-# Replication Package for _"A Novel Approach for Automatic Program Repair using Round-Trip Translation with Large Language Models"_
+# Replication Package for _"Assessing the Latent Automated Program Repair Capabilities of Large Language Models using Round-Trip Translation"_
 
-This repository contains the replication package for the paper "A Novel 
-Approach for Automatic Program Repair using Round-Trip Translation with Large 
-Language Models" by Fernando Vallecillos Ruiz, Anastasiia Grishina, Max Hort and Leon Moonen, deposited on arXiv with DOI: [10.48550/arXiv.2401.07994](https://doi.org/10.48550/arXiv.2401.07994). A copy of the paper is included in this repository. 
+This repository contains the replication package for the paper "Assessing the Latent Automated Program Repair Capabilities of Large Language Models using Round-Trip Translation" by Fernando Vallecillos Ruiz, Anastasiia Grishina, Max Hort and Leon Moonen, which is currently under review.
+
+An earlier version was deposited on arXiv with DOI: [10.48550/arXiv.2401.07994](https://doi.org/10.48550/arXiv.2401.07994) with title "A Novel Approach for Automated Program Repair using Round-Trip Translation with Large Language Models".
 
 The replication package is archived on Zenodo with DOI: [10.5281/zenodo.10500593](https://doi.org/10.5281/zenodo.10500593). It is maintained on GitHub at <https://github.com/secureIT-project/RTT_for_APR>. 
 
 The source code is distributed under the MIT license, and except for 3rd party datasets that come with their own license, all documentation, data, models and results in this repository are distributed under the CC BY 4.0 license. 
+
 
 ## Organization
 
